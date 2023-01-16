@@ -14,10 +14,6 @@ If you do not have Visual Studio Code, go to the main VSCode website using this 
 
 If Visual Studio Code is installed, you can double click on the app icon to open up a new window or click on *File>New Window*. To open the terminal window, click on *Terminal>New Terminal*.
 
-You should see a new terminal window open as displayed below.
-
-![Visual Studio Code Opened](/assets/vscode)
-
 > Step 3: Connecting to the remote server
 
 In this next step, we will be connecting to a remote computer (UCSD's ieng6 remote server) through the terminal.
@@ -26,11 +22,34 @@ Before beginning, make sure *Git Bash* is installed. If it is not installed or i
 
 We will now be typing in some commands which will be distinguished by being displayed in a code block like `this`.
 
-The **ssh** command essentially starts running commands on "another" computer, like the remote server. To access the server, we use the following format for the command.
+```
+# The **ssh** command essentially starts running commands on "another" computer, like the remote server. 
+# To access the server, type the following:
 
-`ssh cs15lwi23##@ieng6.ucsd.edu` 
+$ ssh cs15lwi23##@ieng6.ucsd.edu
+```
+
 (The *##* referring to the ending of the account username that you logged into before)
+
+If all goes well and this is your first time connecting to the remote server, you will see a message double checking your connection. Answer `yes` to the questions and when it asks for your password, simply enter the same password that you use to log into UCSD student accounts (the one you reset). 
+
+If at any point you run into problems, type the error into Google or Stack Overflow or ask someone if you are able to help resolve it.
+
+Once connected, you should see some notices about the *server*, or the computer that you remotely connected to. The computer that you are on is called the *client* in this context.
 
 > Step 4: Commands to try out
 
+After connecting to the remote server, you can try out some commands to play around and learn about the server.
+
+Here are some example commands to try!
+
+1. `cd ~`
+2. `ls -lat`
+3. `ls -a`
+4. `ls <directory> where <directory> is /home/linux/ieng6/cs15lwi23/cs15lwi23abc, where the abc is one of the other group members’ username`
+5. `cp /home/linux/ieng6/cs15lwi23/public/hello.txt ~/`
+6. `cat /home/linux/ieng6/cs15lwi23/public/hello.txt`
+
 > Step 5: Exiting the server
+
+To log out of the server, either hold down on *Ctrl-D* or type `exit`.
