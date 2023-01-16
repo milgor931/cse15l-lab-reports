@@ -4,7 +4,7 @@
 
 > Step 1: Log into course-specific student account
 
-Log into your account on the UCSD Educational Technology Services site using this [link](https://sdacs.ucsd.edu/~icc/index.php). Lookup your account if you already reset your password. If you have never logged in before, reset your password following this [tutorial](https://docs.google.com/document/d/1hs7CyQeh-MdUfM9uv99i8tqfneos6Y8bDU0uhn1wqho/edit).
+Log into your account on the UCSD Educational Technology Services site using this [link](https://sdacs.ucsd.edu/~icc/index.php). Lookup your account if you already reset your password. If you have never logged in before, reset your password following [this tutorial](https://docs.google.com/document/d/1hs7CyQeh-MdUfM9uv99i8tqfneos6Y8bDU0uhn1wqho/edit).
 
 Once you are in, you should see a section near the top of the page displaying additional accounts, including one that begins with *cs15lwi23*. Make a note of this account username because you will use it to log in later. 
 
