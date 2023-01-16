@@ -41,6 +41,8 @@ If at any point you run into problems, type the error into Google or Stack Overf
 
 Once connected, you should see some notices about the *server*, or the computer that you remotely connected to. The computer that you are on is called the *client* in this context.
 
+![Connection Example](connected.png)
+
 > Step 4: Commands to try out
 
 After connecting to the remote server, you can try out some commands to play around and learn about the server.
@@ -50,9 +52,13 @@ Here are some example commands to try!
 1. `cd ~`
 2. `ls -lat`
 3. `ls -a`
-4. `ls <directory> where <directory> is /home/linux/ieng6/cs15lwi23/cs15lwi23abc, where the abc is one of the other group members’ username`
+4. `ls <directory>` where <directory> is /home/linux/ieng6/cs15lwi23/cs15lwi23abc (abc is one of the other group members’ username)
 5. `cp /home/linux/ieng6/cs15lwi23/public/hello.txt ~/`
 6. `cat /home/linux/ieng6/cs15lwi23/public/hello.txt`
+
+In the following example, I changed the directory to the home directory, used `pwd` to check what directory I’m in. Then I listed all the files in the directory and used -a extension to print all the files in the directory while the -lat extension shows the files and more information about them in a table format. Then, I copied the hello.txt file into the server’s public directory. I used vim to edit the contents of the file as well and checked to see if it worked.
+
+![Commands Example](commands.png)
 
 > Step 5: Exiting the server
 
