@@ -6,7 +6,7 @@
 
 Log into your account on the UCSD Educational Technology Services site using this [link](https://sdacs.ucsd.edu/~icc/index.php). Lookup your account if you already reset your password. If you have never logged in before, reset your password following this [tutorial](https://docs.google.com/document/d/1hs7CyQeh-MdUfM9uv99i8tqfneos6Y8bDU0uhn1wqho/edit).
 
-Once you are in, you should see a section near the top of the page displaying additional accounts, including one that begins with *CS15lwi23*. Make a note of this account username because you will use it to log in later. 
+Once you are in, you should see a section near the top of the page displaying additional accounts, including one that begins with *cs15lwi23*. Make a note of this account username because you will use it to log in later. 
 
 ![Student Account Lookup](CSE 15L Lookup.png)
 
@@ -24,11 +24,10 @@ In this next step, we will be connecting to a remote computer (UCSD's ieng6 remo
 
 Before beginning, make sure *Git Bash* is installed. If it is not installed or if you are not sure, download using this [link](https://gitforwindows.org/).
 
-We will now be typing in some commands which will be distinguished by being displayed in a code block like `this`.
+We will now be typing in some commands which will be distinguished by being displayed in a code block like `this` but do not type the `$`.
 
 ```
 # The **ssh** command essentially starts running commands on "another" computer, like the remote server. 
-# To access the server, type the following:
 
 $ ssh cs15lwi23##@ieng6.ucsd.edu
 ```
@@ -49,12 +48,14 @@ After connecting to the remote server, you can try out some commands to play aro
 
 Here are some example commands to try!
 
-1. `cd ~`
-2. `ls -lat`
-3. `ls -a`
+1. `cd ~` to change directory to the home directory
+2. `ls -lat` to list all the files in the directory in a table-like format
+3. `ls -a` to list all the filenames in a directory
 4. `ls <directory>` where <directory> is /home/linux/ieng6/cs15lwi23/cs15lwi23abc (abc is one of the other group members’ username)
-5. `cp /home/linux/ieng6/cs15lwi23/public/hello.txt ~/`
-6. `cat /home/linux/ieng6/cs15lwi23/public/hello.txt`
+5. `cp /home/linux/ieng6/cs15lwi23/public/hello.txt ~/` to copy a file into the home directory
+6. `cat /home/linux/ieng6/cs15lwi23/public/hello.txt` to display the contents of the *hello.txt* file in the public directory'
+7. `pwd` to show what the "present working directory" is aka where you are in the computer
+8. `vim` to edit a file (press *esc* and type `:wq` to save changes when using vim)
 
 In the following example, I changed the directory to the home directory, used `pwd` to check what directory I’m in. Then I listed all the files in the directory and used -a extension to print all the files in the directory while the -lat extension shows the files and more information about them in a table format. Then, I copied the hello.txt file into the server’s public directory. I used vim to edit the contents of the file as well and checked to see if it worked.
 
