@@ -8,6 +8,8 @@ Log into your account on the UCSD Educational Technology Services site using thi
 
 Once you are in, you should see a section near the top of the page displaying additional accounts, including one that begins with *CS15lwi23*. Make a note of this account username because you will use it to log in later. 
 
+![Student Account Lookup](CSE 15L Lookup.png)
+
 > Step 2: Set up and open a new window in Visual Studio Code
 
 If you do not have Visual Studio Code, go to the main VSCode website using this [link](https://code.visualstudio.com/) and click the download button. Complete the proper installation steps for your operating system to get it properly installed.
