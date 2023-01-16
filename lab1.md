@@ -14,6 +14,8 @@ If you do not have Visual Studio Code, go to the main VSCode website using this 
 
 If Visual Studio Code is installed, you can double click on the app icon to open up a new window or click on *File>New Window*. To open the terminal window, click on *Terminal>New Terminal*.
 
+![Opening VSCode Terminal](VS Code Open.png)
+
 > Step 3: Connecting to the remote server
 
 In this next step, we will be connecting to a remote computer (UCSD's ieng6 remote server) through the terminal.
