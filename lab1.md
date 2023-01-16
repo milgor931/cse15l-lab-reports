@@ -2,7 +2,7 @@
 
 *A simple tutorial on how to connect to the remote server at UCSD (ieng6) through the course-specific student account.*
 
-> Step 1: Log into course-specific student account on
+> Step 1: Log into course-specific student account
 
 Log into your account on the UCSD Educational Technology Services site using this [link](https://sdacs.ucsd.edu/~icc/index.php). Lookup your account if you already reset your password. If you have never logged in before, reset your password following this [tutorial](https://docs.google.com/document/d/1hs7CyQeh-MdUfM9uv99i8tqfneos6Y8bDU0uhn1wqho/edit).
 
