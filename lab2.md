@@ -44,9 +44,6 @@ class StringServer {
 
 ```
 
-What are the relevant arguments to those methods, and the values of any relevant fields of the class?
-How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
-
 For the StringServer to work, the *main()* method in the StringServer class is first called upon executing the code. This then creates a handler and reads the command line arguments to create a port on whichever port the user specifies in the terminal. Then, the *handleRequest()* method of the Handler class is called after the Handler object is created that handles any web requests, such as getting certain "pages" based on the paths or working with queries.
 
 The StringServer requires 1 command line argument for the port number to start running the code locally and the *handleRequest()* method requires an argument for the URI object to determine what to do based on the URL. 
