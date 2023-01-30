@@ -13,12 +13,6 @@
   
 # Part 2
 
-A failure-inducing input for the buggy program, as a JUnit test and any associated code (write it as a code block in Markdown)
-An input that doesn’t induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)
-The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above)
-The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
-Briefly describe why the fix addresses the issue.
-
 ### The (Before) Buggy Method to Test
 This method is supposed to take in an integer array as an input and generate a new array and return it with the elements of the original array in reversed order. 
 
@@ -34,6 +28,7 @@ static int[] reversed(int[] arr) {
 
 ### Failure-Inducing Input as JUnit Test
 
+The testReversed() method will fail on an actual array because the method changes the original input array to 0's and returns the original updated array which is incorrect and will not work on any input with a length of more than or equal to 1.
 
 ```
 @Test
