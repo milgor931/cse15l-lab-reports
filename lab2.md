@@ -3,8 +3,9 @@
 *Servers and Bugs*
 
 # Part 1
-  
- 
+
+ ![before](whats poppin mister.png)
+ ![after](whats poppin mister result.png)
   
  ![port 5000 working example](Look it works.png)
 
