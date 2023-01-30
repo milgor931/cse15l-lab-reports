@@ -47,13 +47,18 @@ class StringServer {
 What are the relevant arguments to those methods, and the values of any relevant fields of the class?
 How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
 
-1. For the StringServer to work, the *main()* method in the StringServer class is first called upon executing the code. This then creates a handler and reads the command line arguments to create a port on whichever port the user specifies in the terminal. Then, the *handleRequest()* method of the Handler class is called after the Handler object is created that handles any web requests, such as getting certain "pages" based on the paths or working with queries.
-2. The StringServer requires 1 command line argument for the port number to start running the code locally and the *handleRequest()* method requires an argument for the URI object to determine what to do based on the URL. 
+For the StringServer to work, the *main()* method in the StringServer class is first called upon executing the code. This then creates a handler and reads the command line arguments to create a port on whichever port the user specifies in the terminal. Then, the *handleRequest()* method of the Handler class is called after the Handler object is created that handles any web requests, such as getting certain "pages" based on the paths or working with queries.
+
+The StringServer requires 1 command line argument for the port number to start running the code locally and the *handleRequest()* method requires an argument for the URI object to determine what to do based on the URL. 
 
  ![before](whats poppin.png)
  
  
  ![after](whats poppin mister result.png)
+ 
+When you add a query to the URL path or reload the page while the server is running on the specified port number, the *handleRequest()* method runs and has a new URI passed on. In the examples shown above, only the query changes. When this happens url path is checked to see if it passes any of the conditions in the method. Since it did contain "add-message", the else-if statement runs and the instance variable, pageString is updated and as you can see, the page shows the newly updated text. 
+ 
+ However, the StringServer does not restart and it keeps listening in for requests or changes after being initially started. 
   
 # Part 2
 
