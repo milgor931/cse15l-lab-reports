@@ -19,52 +19,70 @@ The symptom, as the output of running the tests (provide it as a screenshot of r
 The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
 Briefly describe why the fix addresses the issue.
 
+### The (Before) Buggy Method to Test
+This method is supposed to take in an integer array as an input and generate a new array and return it with the elements of the original array in reversed order. 
+
+```
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = newArray[arr.length - i - 1];
+    }
+    return arr;
+}
+```
+
 ### Failure-Inducing Input as JUnit Test
+
 
 ```
 @Test
-public void testReverseInPlace() {
-    int[] input1 = { 3 };
-    ArrayExamples.reverseInPlace(input1);
-    assertArrayEquals(new int[]{ 3 }, input1);
+public void testReversedNormal() {
+    int[] arr = { 1, 2, 3 };
+    assertArrayEquals(new int[]{ 3, 2, 1 }, ArrayExamples.reversed(arr));
 }
 ```
 
 ### Non-Failure-Inducing Input as JUnit Test
 
+The testReversed() method works on an empty array since it also returns an empty array.
+
 ```
 @Test
-public void testReverseInPlace() {
-    int[] input1 = { 3 };
-    ArrayExamples.reverseInPlace(input1);
-    assertArrayEquals(new int[]{ 3 }, input1);
+public void testReversedEmpty() {
+    int[] input1 = {  };
+    assertArrayEquals(new int[]{  }, ArrayExamples.reversed(input1));
 }
 ```
 
 ### Symptom of Running Tests
-![lab 3 test symptom](lab 3 test failure.png)
+![lab 3 test symptom](test fail and test pass.png)
 
 ### Code Fix
 
 #### Before
 ```
-@Test
-public void testReverseInPlace() {
-    int[] input1 = { 3 };
-    ArrayExamples.reverseInPlace(input1);
-    assertArrayEquals(new int[]{ 3 }, input1);
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = newArray[arr.length - i - 1];
+    }
+    return arr;
 }
 ```
 
 #### After
 ```
-@Test
-public void testReverseInPlace() {
-    int[] input1 = { 3 };
-    ArrayExamples.reverseInPlace(input1);
-    assertArrayEquals(new int[]{ 3 }, input1);
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      newArray[i] = arr[arr.length - i - 1];
+    }
+    return newArray;
 }
 ```
+
+The code fix involved making sure that the new array is updated, not the elements of the old one with the null newArray elements. We also made a fix to make sure that the created newArray is returned, not the original input array.
   
 # Part 3
   
