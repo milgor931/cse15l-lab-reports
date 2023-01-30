@@ -53,6 +53,8 @@ public void testReversedEmpty() {
 ### Symptom of Running Tests
 ![lab 3 test symptom](test fail and test pass.png)
 
+As you can see in the screenshot, the first test on an empty array does not induce an error but the second test on a three element array fails because all of the elements are set to 0.
+
 ### Code Fix
 
 #### Before
