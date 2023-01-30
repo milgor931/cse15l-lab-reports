@@ -4,12 +4,56 @@
 
 # Part 1
 
- ![before](whats poppin mister.png)
- ![after](whats poppin mister result.png)
-  
- ![port 5000 working example](Look it works.png)
+StringServer code
 
- ![StringServer.java code](StringServer Code.png)
+```
+import java.io.IOException;
+import java.net.URI;
+
+class Handler implements URLHandler {
+    // The one bit of state on the server: a number that will be manipulated by
+    // various requests.
+    String pageString = new String("");
+
+    public String handleRequest(URI url) {
+        if (url.getPath().equals("/")) {
+            return String.format(this.pageString);
+        } else if (url.getPath().contains("/add-message")) {
+            String[] parameters = url.getQuery().split("=");
+            if (parameters[0].equals("s")) {
+                this.pageString += (parameters[1] + "\n");
+                return String.format(this.pageString);
+            }
+        }
+        return "404 Not Found!";
+    }
+}
+
+class StringServer {
+    public static void main(String[] args) throws IOException {
+        if(args.length == 0){
+            System.out.println("Missing port number! Try any number between 1024 to 49151");
+            return;
+        }
+
+        int port = Integer.parseInt(args[0]);
+
+        Server.start(port, new Handler());
+    }
+}
+
+```
+
+What are the relevant arguments to those methods, and the values of any relevant fields of the class?
+How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
+
+1. For the StringServer to work, the *main()* method in the StringServer class is first called upon executing the code. This then creates a handler and reads the command line arguments to create a port on whichever port the user specifies in the terminal. Then, the *handleRequest()* method of the Handler class is called after the Handler object is created that handles any web requests, such as getting certain "pages" based on the paths or working with queries.
+2. The StringServer requires 1 command line argument for the port number to start running the code locally and the *handleRequest()* method requires an argument for the URI object to determine what to do based on the URL. 
+
+ ![before](whats poppin mister.png)
+ 
+ 
+ ![after](whats poppin mister result.png)
   
 # Part 2
 
@@ -51,9 +95,10 @@ public void testReversedEmpty() {
 ```
 
 ### Symptom of Running Tests
-![lab 3 test symptom](test fail and test pass.png)
 
 As you can see in the screenshot, the first test on an empty array does not induce an error but the second test on a three element array fails because all of the elements are set to 0.
+
+![lab 3 test symptom](test fail and test pass.png)
 
 ### Code Fix
 
@@ -79,7 +124,7 @@ static int[] reversed(int[] arr) {
 }
 ```
 
-The code fix involved making sure that the new array is updated, not the elements of the old one with the null newArray elements. We also made a fix to make sure that the created newArray is returned, not the original input array.
+**The code fix involved making sure that the new array is updated, not the elements of the old one with the null newArray elements. We also made a fix to make sure that the created newArray is returned, not the original input array.**
   
 # Part 3
   
