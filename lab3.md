@@ -2,14 +2,108 @@
 
 *Researching Commands*
 
+Source used for all examples: https://www.techrepublic.com/article/10-ways-to-use-grep-to-search-files-in-linux/
+
 # 1. grep -c
 **Returns how many matches grep found**
+
+## ex.1
+```
+#COMMAND
+$ grep -c "Vallarta" ./skill-demo1-data/written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
+
+#RESULT
+20
+```
+
+## ex.2
+```
+#COMMAND
+$ grep -c "chapter" ./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/*.txt
+
+#RESULT
+./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/ch1.txt:6
+./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/ch14.txt:4
+./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/ch15.txt:2
+./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/ch2.txt:2
+./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/ch3.txt:3
+./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/ch6.txt:3
+./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/ch7.txt:7
+./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/ch8.txt:5
+./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/ch9.txt:3
+```
 
 # 2. grep -rl
 **Returns only the list of filenames that match the search string**
 
+## ex.1
+```
+#COMMAND
+$ grep -rl "Vallarta" ./skill-demo1-data/written_2/travel_guides/berlitz2/*.txt  
+
+#RESULT
+./skill-demo1-data/written_2/travel_guides/berlitz2/Vallarta-History.txt
+./skill-demo1-data/written_2/travel_guides/berlitz2/Vallarta-WhatToDo.txt
+./skill-demo1-data/written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
+```
+
+## ex.2
+```
+#COMMAND
+$ grep -rl "passion" ./skill-demo1-data/written_2/travel_guides/berlitz2/*.txt
+
+#RESULT
+./skill-demo1-data/written_2/travel_guides/berlitz2/Amsterdam-Intro.txt
+./skill-demo1-data/written_2/travel_guides/berlitz2/Bali-WhereToGo.txt
+./skill-demo1-data/written_2/travel_guides/berlitz2/Barcelona-WhereToGo.txt
+./skill-demo1-data/written_2/travel_guides/berlitz2/Bermuda-WhereToGo.txt
+./skill-demo1-data/written_2/travel_guides/berlitz2/Canada-History.txt
+./skill-demo1-data/written_2/travel_guides/berlitz2/Cuba-WhereToGo.txt
+./skill-demo1-data/written_2/travel_guides/berlitz2/Paris-WhatToDo.txt
+```
+
 # 3. grep -r
 **Search for the files that match the given string in a directory rather than a text file**
 
-# 4. grep -v
-**Displays all the entries which are NOT a match with the given string**
+## ex.1
+```
+#COMMAND
+ $ grep -r "Jacuzzis" ./skill-demo1-data/written_2/travel_guides/berlitz2
+
+#RESULT
+./skill-demo1-data/written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt:The mountain areas surrounding the Capalita River are also the site of many natural treasures, including the Capalitilla Cascades. About 30 km (18.5 miles) north of Tangolunda a grouping of waterfalls, with heights averaging 25 m (80 feet) form natural Jacuzzis and clear pools for swimming. The area is also popular for horseback riding and rappelling.
+```
+
+## ex.2
+```
+#COMMAND
+$ grep -r "blessedly" ./skill-demo1-data/written_2/non-fiction
+
+#RESULT
+./skill-demo1-data/written_2/non-fiction/OUP/Kauffman/ch9.txt:In turn, this led me to wonder where such nice fitness landscapes arise in evolution, for not all fitness landscapes are so blessedly smooth. Some are random. Some are anticorrelated.
+```
+
+
+# 4. grep -i
+**Ignores casing (lowercase or uppercase) on the string**
+
+## ex.1
+```
+#COMMAND
+$ grep -i "HELLO" ./skill-demo1-data/written_2/travel_guides/*/*.txt
+
+#RESULT
+./skill-demo1-data/written_2/travel_guides/berlitz1/WhereToFrance.txt:        Saint-Wandrille, Le Bec-Hellouin, and Caen, culminating in their
+./skill-demo1-data/written_2/travel_guides/berlitz1/WhereToHongKong.txt:        the local people smile “hello” and, if you’re lucky, point you to a
+./skill-demo1-data/written_2/travel_guides/berlitz1/WhereToItaly.txt:        (or Ca’ Grande), while gondoliers claim Othello’s Desdemona lived in
+```
+
+## ex.2
+```
+#COMMAND
+$ grep -i "bLissFul" ./skill-demo1-data/written_2/travel_guides/*/*.txt
+
+#RESULT
+./skill-demo1-data/written_2/travel_guides/berlitz1/WhereToItaly.txt:        spring with pink azaleas, was celebrated by John Keats as a “blissful
+./skill-demo1-data/written_2/travel_guides/berlitz2/Nepal-History.txt:Buddha never claimed to be divine and in fact emphasized that all men could by their own efforts follow his path to enlightenment and the blissful state of nirvana, release from the cycle of repeated births and deaths. His “Four Noble Truths” are: all life is suffering; suffering is caused by desires; desires can be suppressed; and the way to become free of desires is to follow eight “right” principles — the Eightfold Path. These are right views, right intentions, right speech, right conduct, right livelihood, right effort, right mindfulness, and right contemplation.
+```
