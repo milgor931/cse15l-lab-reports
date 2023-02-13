@@ -5,9 +5,9 @@
 Source used for all examples: [TECH REPUBLIC SOURCE](https://www.techrepublic.com/article/10-ways-to-use-grep-to-search-files-in-linux/)
 
 # 1. grep -c
-**Returns how many matches grep found**
+**Returns how many line matches grep found**
 
-## ex.1 
+## ex.1 (1)
 This example shows how using the -c option can show us how many lines in a single file match the given string. This is helpful when trying to find the count or sort the files based on the number of lines a file has with the string on it. 
 ```
 #COMMAND
@@ -17,7 +17,7 @@ $ grep -c "Vallarta" ./skill-demo1-data/written_2/travel_guides/berlitz2/Vallart
 20
 ```
 
-## ex.2
+## ex.2 (2)
 This example shows how to use the -c option to provide a clean display showing which files and how many lines in each of those files match the given string. This can be useful for finding the files with the string and sorting them later. 
 ```
 #COMMAND
@@ -38,7 +38,7 @@ $ grep -c "chapter" ./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/*.txt
 # 2. grep -rl
 **Returns only the list of filenames that match the search string**
 
-## ex.1
+## ex.1 (3)
 This example shows how to use the -rl option to find filenames with the given string in their content using the .txt extension. This is helpful if we just want to know the names of the files with the string that match a certain filepath but not the lines with the string itself. 
 ```
 #COMMAND
@@ -50,7 +50,7 @@ $ grep -rl "Vallarta" ./skill-demo1-data/written_2/travel_guides/berlitz2/*.txt
 ./skill-demo1-data/written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
 ```
 
-## ex.2
+## ex.2 (4)
 This is another example of the -rl option to find filenames with the given string in the file but searching through a directory rather than using the .txt extension like we just did before. This is helpful if we just want to know the names of the files with the string in the directory but not the lines with the string itself. 
 ```
 #COMMAND
@@ -65,7 +65,7 @@ $ grep -rl "Vallarta" ./skill-demo1-data/written_2/travel_guides/berlitz2
 # 3. grep -r
 **Search for the files that match the given string in a directory rather than a text file**
 
-## ex.1
+## ex.1 (5)
 This -r option finds the files that have the given string using the directory name instead of having to use the * operator to make the search for text files easier. 
 ```
 #COMMAND
@@ -75,7 +75,7 @@ This -r option finds the files that have the given string using the directory na
 ./skill-demo1-data/written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt:The mountain areas surrounding the Capalita River are also the site of many natural treasures, including the Capalitilla Cascades. About 30 km (18.5 miles) north of Tangolunda a grouping of waterfalls, with heights averaging 25 m (80 feet) form natural Jacuzzis and clear pools for swimming. The area is also popular for horseback riding and rappelling.
 ```
 
-## ex.2
+## ex.2 (6)
 This is another example of using the -r option to find files with the directory name instead. In this example, I show how to find several files, not just one, unlike the one that I found in the first example of this option. 
 ```
 #COMMAND
@@ -90,7 +90,7 @@ $ grep -r "blessed" ./skill-demo1-data/written_2/non-fiction
 # 4. grep -i
 **Ignores casing (lowercase or uppercase) on the string**
 
-## ex.1
+## ex.1 (7)
 The -i option is helpful to search for a string in a file without worrying about whether the string is capitalized or not. This could be helpful in cases where you are looking for a word that might be capitalized or not. In this example, I search for capitalized "HELLO" and the results show examples with lowercase or mixed-casing. 
 ```
 #COMMAND
@@ -102,7 +102,7 @@ $ grep -i "HELLO" ./skill-demo1-data/written_2/travel_guides/*/*.txt
 ./skill-demo1-data/written_2/travel_guides/berlitz1/WhereToItaly.txt:        (or Ca’ Grande), while gondoliers claim Othello’s Desdemona lived in
 ```
 
-## ex.2
+## ex.2 (8)
 This example shows that the -i option could be helpful in a situation where you accidently capitalize letters in the search string. As you can see, by making sure that we use this option, we don't have to worry about capitalizing to find the correct results. 
 ```
 #COMMAND
