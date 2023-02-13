@@ -2,12 +2,13 @@
 
 *Researching Commands*
 
-Source used for all examples: https://www.techrepublic.com/article/10-ways-to-use-grep-to-search-files-in-linux/
+Source used for all examples: [TECH REPUBLIC SOURCE](https://www.techrepublic.com/article/10-ways-to-use-grep-to-search-files-in-linux/)
 
 # 1. grep -c
 **Returns how many matches grep found**
 
-## ex.1
+## ex.1 
+This example shows how using the -c command can show us how many lines in a single file match the given string. This is helpful when trying to find the count or sort the files based on the number of lines a file has with the string on it. 
 ```
 #COMMAND
 $ grep -c "Vallarta" ./skill-demo1-data/written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
@@ -17,6 +18,7 @@ $ grep -c "Vallarta" ./skill-demo1-data/written_2/travel_guides/berlitz2/Vallart
 ```
 
 ## ex.2
+This example shows how to use the -c command to provide a clean display showing which files and how many lines in each of those files match the given string. This can be useful for finding the files with the string and sorting them later. 
 ```
 #COMMAND
 $ grep -c "chapter" ./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/*.txt
