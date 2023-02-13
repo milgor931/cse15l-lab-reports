@@ -8,7 +8,7 @@ Source used for all examples: [TECH REPUBLIC SOURCE](https://www.techrepublic.co
 **Returns how many matches grep found**
 
 ## ex.1 
-This example shows how using the -c command can show us how many lines in a single file match the given string. This is helpful when trying to find the count or sort the files based on the number of lines a file has with the string on it. 
+This example shows how using the -c option can show us how many lines in a single file match the given string. This is helpful when trying to find the count or sort the files based on the number of lines a file has with the string on it. 
 ```
 #COMMAND
 $ grep -c "Vallarta" ./skill-demo1-data/written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
@@ -18,7 +18,7 @@ $ grep -c "Vallarta" ./skill-demo1-data/written_2/travel_guides/berlitz2/Vallart
 ```
 
 ## ex.2
-This example shows how to use the -c command to provide a clean display showing which files and how many lines in each of those files match the given string. This can be useful for finding the files with the string and sorting them later. 
+This example shows how to use the -c option to provide a clean display showing which files and how many lines in each of those files match the given string. This can be useful for finding the files with the string and sorting them later. 
 ```
 #COMMAND
 $ grep -c "chapter" ./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/*.txt
@@ -39,6 +39,7 @@ $ grep -c "chapter" ./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/*.txt
 **Returns only the list of filenames that match the search string**
 
 ## ex.1
+This example shows how to use the -rl option to find filenames with the given string in their content using the .txt extension. This is helpful if we just want to know the names of the files with the string that match a certain filepath but not the lines with the string itself. 
 ```
 #COMMAND
 $ grep -rl "Vallarta" ./skill-demo1-data/written_2/travel_guides/berlitz2/*.txt  
@@ -50,24 +51,22 @@ $ grep -rl "Vallarta" ./skill-demo1-data/written_2/travel_guides/berlitz2/*.txt
 ```
 
 ## ex.2
+This is another example of the -rl option to find filenames with the given string in the file but searching through a directory rather than using the .txt extension like we just did before. This is helpful if we just want to know the names of the files with the string in the directory but not the lines with the string itself. 
 ```
 #COMMAND
-$ grep -rl "passion" ./skill-demo1-data/written_2/travel_guides/berlitz2/*.txt
+$ grep -rl "Vallarta" ./skill-demo1-data/written_2/travel_guides/berlitz2        
 
 #RESULT
-./skill-demo1-data/written_2/travel_guides/berlitz2/Amsterdam-Intro.txt
-./skill-demo1-data/written_2/travel_guides/berlitz2/Bali-WhereToGo.txt
-./skill-demo1-data/written_2/travel_guides/berlitz2/Barcelona-WhereToGo.txt
-./skill-demo1-data/written_2/travel_guides/berlitz2/Bermuda-WhereToGo.txt
-./skill-demo1-data/written_2/travel_guides/berlitz2/Canada-History.txt
-./skill-demo1-data/written_2/travel_guides/berlitz2/Cuba-WhereToGo.txt
-./skill-demo1-data/written_2/travel_guides/berlitz2/Paris-WhatToDo.txt
+./skill-demo1-data/written_2/travel_guides/berlitz2/Vallarta-History.txt
+./skill-demo1-data/written_2/travel_guides/berlitz2/Vallarta-WhatToDo.txt
+./skill-demo1-data/written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
 ```
 
 # 3. grep -r
 **Search for the files that match the given string in a directory rather than a text file**
 
 ## ex.1
+This -r option finds the files that have the given string using the directory name instead of having to use the * operator to make the search for text files easier. 
 ```
 #COMMAND
  $ grep -r "Jacuzzis" ./skill-demo1-data/written_2/travel_guides/berlitz2
@@ -77,11 +76,13 @@ $ grep -rl "passion" ./skill-demo1-data/written_2/travel_guides/berlitz2/*.txt
 ```
 
 ## ex.2
+This is another example of using the -r option to find files with the directory name instead. In this example, I show how to find several files, not just one, unlike the one that I found in the first example of this option. 
 ```
 #COMMAND
-$ grep -r "blessedly" ./skill-demo1-data/written_2/non-fiction
+$ grep -r "blessed" ./skill-demo1-data/written_2/non-fiction
 
 #RESULT
+./skill-demo1-data/written_2/non-fiction/OUP/Fletcher/ch2.txt:As a “nation under God,” Americans have been both blessed and cursed by a sense of mission in the world. Covenanted with higher powers, the nation has a destiny—a “manifest destiny” as journalist John L. O’Sullivan dubbed our policy of westward expansion in the mid-1840s. The phrase took hold and gave American politicians a sense of national purpose as they annexed Texas in 1845, negotiated a division of the Oregon territory with England, and led the country into war with Mexico a year later.17 This was territorial aggrandizement in the name of the “nation under God.” These were the aggressive moves that established most of the boundaries of the western United States as they are today.
 ./skill-demo1-data/written_2/non-fiction/OUP/Kauffman/ch9.txt:In turn, this led me to wonder where such nice fitness landscapes arise in evolution, for not all fitness landscapes are so blessedly smooth. Some are random. Some are anticorrelated.
 ```
 
@@ -90,6 +91,7 @@ $ grep -r "blessedly" ./skill-demo1-data/written_2/non-fiction
 **Ignores casing (lowercase or uppercase) on the string**
 
 ## ex.1
+The -i option is helpful to search for a string in a file without worrying about whether the string is capitalized or not. This could be helpful in cases where you are looking for a word that might be capitalized or not. In this example, I search for capitalized "HELLO" and the results show examples with lowercase or mixed-casing. 
 ```
 #COMMAND
 $ grep -i "HELLO" ./skill-demo1-data/written_2/travel_guides/*/*.txt
@@ -101,6 +103,7 @@ $ grep -i "HELLO" ./skill-demo1-data/written_2/travel_guides/*/*.txt
 ```
 
 ## ex.2
+This example shows that the -i option could be helpful in a situation where you accidently capitalize letters in the search string. As you can see, by making sure that we use this option, we don't have to worry about capitalizing to find the correct results. 
 ```
 #COMMAND
 $ grep -i "bLissFul" ./skill-demo1-data/written_2/travel_guides/*/*.txt
