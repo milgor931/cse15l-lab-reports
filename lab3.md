@@ -38,6 +38,8 @@ $ grep -c "chapter" ./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/*.txt
 # 2. grep -L
 **Prints the names of the file that do NOT include the search string**
 
+[NOTE: this option is the only one that I found by looking at the "man grep" output]
+
 ## ex.1 (3)
 This example shows how to use the -L option to find filenames that do NOT include the given string in their content using the .txt extension. This is helpful if we just want to know which files do NOT include a specific string when searching in the opposite case that grep is normally used for.
 ```
