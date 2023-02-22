@@ -35,35 +35,35 @@ $ grep -c "chapter" ./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/*.txt
 ./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/ch9.txt:3
 ```
 
-# 2. grep -rl
-**Returns only the list of filenames that match the search string**
+# 2. grep -L
+**Prints the names of the file that do NOT include the search string**
 
 ## ex.1 (3)
-This example shows how to use the -rl option to find filenames with the given string in their content using the .txt extension. This is helpful if we just want to know the names of the files with the string that match a certain filepath but not the lines with the string itself. 
+This example shows how to use the -L option to find filenames that do NOT include the given string in their content using the .txt extension. This is helpful if we just want to know which files do NOT include a specific string when searching in the opposite case that grep is normally used for.
 ```
 #COMMAND
-$ grep -rl "Vallarta" ./skill-demo1-data/written_2/travel_guides/berlitz2/*.txt  
+$ grep -L "dumbo"  ./written_2/non-fiction/OUP/Berk/*.txt
 
 #RESULT
-./skill-demo1-data/written_2/travel_guides/berlitz2/Vallarta-History.txt
-./skill-demo1-data/written_2/travel_guides/berlitz2/Vallarta-WhatToDo.txt
-./skill-demo1-data/written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
+./written_2/non-fiction/OUP/Berk/CH4.txt
+./written_2/non-fiction/OUP/Berk/ch1.txt
+./written_2/non-fiction/OUP/Berk/ch2.txt
+./written_2/non-fiction/OUP/Berk/ch7.txt
 ```
 
 ## ex.2 (4)
-This is another example of the -rl option to find filenames with the given string in the file but searching through a directory rather than using the .txt extension like we just did before. This is helpful if we just want to know the names of the files with the string in the directory but not the lines with the string itself. 
+This is another example of the -L option to find filenames that do NOT include the given string in their content using the .txt extension. In this case, the ch1.txt file in the Rybczynski folder contains the string "operative" so it is not shown but the other two files which DO NOT include that string are displayed.
 ```
 #COMMAND
-$ grep -rl "Vallarta" ./skill-demo1-data/written_2/travel_guides/berlitz2        
+$ grep -L "operative"  ./written_2/non-fiction/OUP/Rybczynski/*.txt
 
 #RESULT
-./skill-demo1-data/written_2/travel_guides/berlitz2/Vallarta-History.txt
-./skill-demo1-data/written_2/travel_guides/berlitz2/Vallarta-WhatToDo.txt
-./skill-demo1-data/written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
+./written_2/non-fiction/OUP/Rybczynski/ch2.txt
+./written_2/non-fiction/OUP/Rybczynski/ch3.txt
 ```
 
 # 3. grep -r
-**Search for the files that match the given string in a directory rather than a text file**
+**Search for the files that match the given string in a DIRECTORY rather than a text file**
 
 ## ex.1 (5)
 This -r option finds the files that have the given string using the directory name instead of having to use the * operator to make the search for text files easier. 
