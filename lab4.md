@@ -34,7 +34,16 @@ Since I am already connected to the remote server, I was able to write git clone
 
 ![image](https://user-images.githubusercontent.com/40010548/221021707-5dd31836-8f46-4958-8471-342807528519.png)
 
+I then change directory into the newly cloned lab7. I type `cd la` and press `<Tab>` and it autocompletes to `lab7/` to help me save time on typing.
+
+![image](https://user-images.githubusercontent.com/40010548/221022438-5a143b1a-ab22-4c65-b5f3-ba5f4e1558f3.png)
+
 6) Run the tests, demonstrating that they fail
+
+![image](https://user-images.githubusercontent.com/40010548/221023182-87f46bb8-1f62-468b-aa50-b5e8ad7b9696.png)
+
+![image](https://user-images.githubusercontent.com/40010548/221023289-45fa9e78-f94d-482b-a4ef-e83f467dc979.png)
+
 
 7) Edit the code file to fix the failing test
 
