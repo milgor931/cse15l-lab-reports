@@ -40,12 +40,21 @@ I then change directory into the newly cloned lab7. I type `cd la` and press `<T
 
 6) Run the tests, demonstrating that they fail
 
+Since I had already used the commands for compiling the tester and .java files before, I can just press `<up><up><up><up><up><enter>` to get the compiler code and  `<up><up><up><up><up><up><enter>` to actually run the JUnit tests more efficiently.
+
 ![image](https://user-images.githubusercontent.com/40010548/221023182-87f46bb8-1f62-468b-aa50-b5e8ad7b9696.png)
 
 ![image](https://user-images.githubusercontent.com/40010548/221023289-45fa9e78-f94d-482b-a4ef-e83f467dc979.png)
 
-
 7) Edit the code file to fix the failing test
+
+To fix the failing test, I can use the `nano` editor to see and edit the file. I typed `nano Li` and press `<Tab>` so that it autocompletes to `nano ListExamples.` and then I type `java` to complete the ending.
+
+![image](https://user-images.githubusercontent.com/40010548/221041247-608fe916-5c9f-488e-a922-58bce6d0848c.png)
+
+The nano editor opens and I can use the arrow keys to quickly skim through the code and find the line with the issue and edit it. In this case, the line to fix it to change `index1 += 1` in the last while loop to `index2 += 1`. To save and exit out, I press `<Ctrl-O>` to save, `<Enter>` to confirm the file name, and `<Ctrl-X` to exit. 
+
+![image](https://user-images.githubusercontent.com/40010548/221041527-059d41db-347d-443c-85b0-fdd8dbba4ab2.png)
 
 8) Run the tests, demonstrating that they now succeed
 
