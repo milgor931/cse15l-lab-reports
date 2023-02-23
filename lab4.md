@@ -58,4 +58,12 @@ The nano editor opens and I can use the arrow keys to quickly skim through the c
 
 8) Run the tests, demonstrating that they now succeed
 
+Once again, use the `<up>` key to re-compile and run the JUnit tests again. I press `<up><up><up><up><up><up><enter>` to get the compiler code and  `<up><up><up><up><up><up><up><up><enter>` to actually run the JUnit tests more efficiently.
+
+![image](https://user-images.githubusercontent.com/40010548/221047805-98274974-9324-4cce-b0b9-9fb9cb32bd58.png)
+
 9) Commit and push the resulting change to your Github account (you can pick any commit message!)
+
+![image](https://user-images.githubusercontent.com/40010548/221048126-9671c7b5-6e3d-48e3-a99e-a210d255fbca.png)
+
+![image](https://user-images.githubusercontent.com/40010548/221048166-0b219726-0c0d-4a64-aaad-eb0b65fea81c.png)
