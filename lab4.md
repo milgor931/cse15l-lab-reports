@@ -64,6 +64,17 @@ Once again, use the `<up>` key to re-compile and run the JUnit tests again. I pr
 
 9) Commit and push the resulting change to your Github account (you can pick any commit message!)
 
+First, I wrote `git add Li` and pressed `<Tab>` to autocomplete to at the file to be staged as a commit. 
+
 ![image](https://user-images.githubusercontent.com/40010548/221048126-9671c7b5-6e3d-48e3-a99e-a210d255fbca.png)
 
+I then wrote `git commit -m "update"` to actually commit the changes.
+
 ![image](https://user-images.githubusercontent.com/40010548/221048166-0b219726-0c0d-4a64-aaad-eb0b65fea81c.png)
+
+Lastly, I wrote `git push` to actually push the changes to Github. 
+
+![image](https://user-images.githubusercontent.com/40010548/221067758-cfeae4c7-6b8e-48ae-b395-d18bfcaefd4f.png)
+
+And that's it! Time!
+
