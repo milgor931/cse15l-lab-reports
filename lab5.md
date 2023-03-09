@@ -11,10 +11,9 @@ Source used for all examples: [HOW TO FORGE SOURCE](https://www.howtoforge.com/t
 This example shows how using the -c option can show us how many lines in a single file match the given string. This is helpful when trying to find the count or sort the files based on the number of lines a file has with the string on it. 
 ```
 #COMMAND
-$ find . -not -name "*.sample"
+$ find ./.git -not -name "*.sample"
 
 #RESULT
-.
 ./.git
 ./.git/config
 ./.git/description
@@ -44,25 +43,27 @@ $ find . -not -name "*.sample"
 ./.git/refs/remotes/origin
 ./.git/refs/remotes/origin/HEAD
 ./.git/refs/tags
-./written_2
 ```
 
 ## ex.2 (2)
-This example shows how to use the -c option to provide a clean display showing which files and how many lines in each of those files match the given string. This can be useful for finding the files with the string and sorting them later. 
+This example shows how to use the -not option to display all the files in the  
 ```
 #COMMAND
-$ grep -c "chapter" ./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/*.txt
+$ find ./written_2 -not -name "*.txt"
 
 #RESULT
-./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/ch1.txt:6
-./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/ch14.txt:4
-./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/ch15.txt:2
-./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/ch2.txt:2
-./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/ch3.txt:3
-./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/ch6.txt:3
-./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/ch7.txt:7
-./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/ch8.txt:5
-./skill-demo1-data/written_2/non-fiction/OUP/Abernathy/ch9.txt:3
+./written_2
+./written_2/non-fiction
+./written_2/non-fiction/OUP
+./written_2/non-fiction/OUP/Abernathy
+./written_2/non-fiction/OUP/Berk
+./written_2/non-fiction/OUP/Castro
+./written_2/non-fiction/OUP/Fletcher
+./written_2/non-fiction/OUP/Kauffman
+./written_2/non-fiction/OUP/Rybczynski
+./written_2/travel_guides
+./written_2/travel_guides/berlitz1
+./written_2/travel_guides/berlitz2
 ```
 
 # 2. find ./ -type f -size +100M
