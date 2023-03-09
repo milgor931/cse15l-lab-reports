@@ -7,5 +7,7 @@
 * [Link to Lab Report 2](https://milgor931.github.io/cse15l-lab-reports/lab2.html)
 * [Link to Lab Report 3](https://milgor931.github.io/cse15l-lab-reports/lab3.html)
 * [Link to Lab Report 4](https://milgor931.github.io/cse15l-lab-reports/lab4.html)
+* [Link to Lab Report 5](https://milgor931.github.io/cse15l-lab-reports/lab5.html)
+
 
 *Link to my other website: [Milana's Portfolio](https://milana-portfolio.web.app/)*
