@@ -164,7 +164,7 @@ $ find . -mmin 2 -name "*.txt"
 **Ignores casing (lowercase or uppercase) on the filename**
 
 ## ex.1 (7)
-The -iname option is helpful to search for a string in a file without worrying about whether the string is capitalized or not. This could be helpful in cases where you are looking for a word that might be capitalized or not. In this example, I search for capitalized "HELLO.txt" and the results show examples with lowercase or mixed-casing. 
+The -iname option is helpful to search for a string in a file without worrying about whether the string is capitalized or not. This could be helpful in cases where you are looking for a word that might be capitalized or not. In this example, I weirdly capitalized "Vallarta-wheretogo.tXt" and the result found the correct file. 
 ```
 #COMMAND
 $ find . -iname "Vallarta-wheretogo.tXt"
@@ -174,7 +174,7 @@ $ find . -iname "Vallarta-wheretogo.tXt"
 ```
 
 ## ex.2 (8)
-This example shows that the -i option could be helpful in a situation where you accidently capitalize letters in the search string. As you can see, by making sure that we use this option, we don't have to worry about capitalizing to find the correct results. 
+This example shows that the -iname option could be helpful in a situation where you accidently capitalize letters in the search string. As you can see, by making sure that we use this option, we don't have to worry about capitalizing to find the correct results. 
 ```
 #COMMAND
 $ find ./written_2/*/berlitz2 -iname "CUBA-WHATTODO.txt"
