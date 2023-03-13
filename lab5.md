@@ -8,7 +8,7 @@ Source used for all examples: [HOW TO FORGE SOURCE](https://www.howtoforge.com/t
 **Only returns files that do not match the given string**
 
 ## ex.1 (1)
-This example shows how using the -not option can find all the files and directories that do NOT include the current string. This command can be useful in the case where you are only trying to see options that do not include the current string to potentially minimize results.
+This example shows how using the -not option can find all the files and directories that do NOT include the current string which in this case is "*.sample". This command can be useful in the case where you are only trying to see options that do not include the current string to potentially minimize results.
 ```
 #COMMAND
 $ find ./.git -not -name "*.sample"
@@ -73,7 +73,7 @@ $ find ./written_2 -not -name "*.txt"
  
 
 ## ex.1 (3)
-This example shows how to use the -L option to find filenames that do NOT include the given string in their content using the .txt extension. This is helpful if we just want to know which files do NOT include a specific string when searching in the opposite case that grep is normally used for.
+This example shows the -mindepth option to display all the results that are a minimum depth of 6 levels down from the present working directory. In this case, the only result that had a depth of 6 was the git HEAD. Using this option can be useful when looking for the deepest file down in the filesystem.
 ```
 #COMMAND
 $ find . -mindepth 6
@@ -83,7 +83,7 @@ $ find . -mindepth 6
 ```
 
 ## ex.2 (4)
-This is another example of the -L option to find filenames that do NOT include the given string in their content using the .txt extension. In this case, the ch1.txt file in the Rybczynski folder contains the string "operative" so it is not shown but the other two files which DO NOT include that string are displayed.
+This is a different example shows the -mindepth option to display all the results that are a minimum depth of 4 levels down from the present working directory. In this case, there were many results in the written_2 directory that were 4 levels down. This command is also useful for skipping having to write */* when traversing or searching down in a filesystem if you already know how far down the files you are looking for are.
 ```
 #COMMAND
 $ find ./written_2 -mindepth 4
