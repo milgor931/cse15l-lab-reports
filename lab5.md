@@ -136,7 +136,7 @@ $ find ./written_2 -mindepth 4
 ./written_2/non-fiction/OUP/Rybczynski/ch3.txt
 ```
 
-# 3. find . -mmin <MIN> -name "*.txt"
+# 3. find -mmin <MIN>
 **Find the file most recently edited. You can pass on an integer <MIN> which is the number of minutes since it's been edited.**
 
 ## ex.1 (5)
@@ -160,7 +160,7 @@ $ find . -mmin 2 -name "*.txt"
 ./written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
 ```
 
-# 4. find -iname [filename]
+# 4. find -iname
 **Ignores casing (lowercase or uppercase) on the filename**
 
 ## ex.1 (7)
