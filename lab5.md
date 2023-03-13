@@ -140,7 +140,7 @@ $ find ./written_2 -mindepth 4
 **Find the file most recently edited. You can pass on an integer <MIN> which is the number of minutes since it's been edited.**
 
 ## ex.1 (5)
-This -r option finds the files that have the given string using the directory name instead of having to use the * operator to make the search for text files easier. 
+In this example, I had recently added some text to the Vallarta-WhereToGo.txt file to make an edit. Assuming that I forgot which exact file I had edited, the -mmin option can be very helpful because it shows me which files I had edited in the past <MIN> minutes. In this case, I had edited the file a minute ago so it was really quick to find.
 ```
 #COMMAND
  $ find . -mmin 1 -name "*.txt"
@@ -150,10 +150,10 @@ This -r option finds the files that have the given string using the directory na
 ```
 
 ## ex.2 (6)
-This is another example of using the -r option to find files with the directory name instead. In this example, I show how to find several files, not just one, unlike the one that I found in the first example of this option. 
+For this example, I had recently added some text to the Vallarta-WhereToGo.txt file to make an edit and also added some text to the Vallarta-WhatToDo.txt file. When I used the -mmin option to check the recently edited file, it showed me both files I had edited with the most recently edited file listed first. 
 ```
 #COMMAND
-$ find . -mmin 1 -name "*.txt"
+$ find . -mmin 2 -name "*.txt"
 
 #RESULT
 ./written_2/travel_guides/berlitz2/Vallarta-WhatToDo.txt
