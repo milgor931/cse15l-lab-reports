@@ -4,11 +4,11 @@
 
 Source used for all examples: [HOW TO FORGE SOURCE](https://www.howtoforge.com/tutorial/linux-find-command/)
 
-# 1. find . -not -name “*.txt”
+# 1. find -not
 **Only returns files that do not match the given string**
 
 ## ex.1 (1)
-This example shows how using the -c option can show us how many lines in a single file match the given string. This is helpful when trying to find the count or sort the files based on the number of lines a file has with the string on it. 
+This example shows how using the -not option can find all the files and directories that do NOT include the current string. This command can be useful in the case where you are only trying to see options that do not include the current string to potentially minimize results.
 ```
 #COMMAND
 $ find ./.git -not -name "*.sample"
@@ -46,7 +46,7 @@ $ find ./.git -not -name "*.sample"
 ```
 
 ## ex.2 (2)
-This example shows how to use the -not option to display all the files in the  
+This example shows how to use the -not option to display all the files in the written_2 directory which are not of the "txt" type by checking the extension. As a result, only the directories are shown, not the text files within them.
 ```
 #COMMAND
 $ find ./written_2 -not -name "*.txt"
